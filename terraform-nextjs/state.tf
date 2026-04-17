@@ -1,9 +1,9 @@
 terraform {
-  backend "S3" {
-    bucket = "mc-my-terraform-state"
+  backend "s3" {
+    bucket = "nextjs-portfolio-bucket-mc"
     key = "global/s3/terraform.tfstate"
-    region = "eu-east-1"
-    dynamodb_table = "terraform-lock-file"
+    region = "us-east-1"
+    use_lockfile = true
     
   }
 }
